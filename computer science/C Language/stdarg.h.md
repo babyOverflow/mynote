@@ -1,6 +1,7 @@
 # stdarg.h
-C 함수가 가변 길이 인자를 사용하기 위해서 사용하기 위해 필요한 매크로와 자료형을 포함한다. 대표적으로 `printf`에서 사용한다.
+C 함수가 가변 길이 인자를 사용하기 위해서 필요한 매크로와 자료형을 포함한다. 대표적으로 `printf`에서 사용한다.
 
+**EXAMPLE**
 ``` C
 void foo(char *fmt, ...)
 {
@@ -28,17 +29,17 @@ void foo(char *fmt, ...)
 ```
 
 **SYNOPSIS**
-```
-     #include <stdarg.h>
+``` C
+#include <stdarg.h>
 
-     void
-     va_start(va_list ap, last);
+void
+va_start(va_list ap, last);
 
-     type
-     va_arg(va_list ap, type);
+type
+va_arg(va_list ap, type);
 
-     void
-     va_end(va_list ap);
+void
+va_end(va_list ap);
 ```
 
 **va_list**는 va_arg, va_start와 va_end가 사용하는 객체이다. 
@@ -46,8 +47,6 @@ void foo(char *fmt, ...)
 **va_arg()** 는 *ap*에서 값을 반환하고 *ap*를 증가시켜 다음 인자를 가르키게 합니다. 이때 반환디고 증가되는 값은 *type*에 따라 결정됩니다.
 %*type*이 *int* 보다 작을 경우(ex char, short) int형(또는 unsigned int)으로 자동으로 변환되고 warning이 뜬다. 컴파일러에 의존적인 작동??
 **va_end()** 는 va_start로 초기화한 가변 인자 리스트를 반환합니다. 함수가 반환되기 전에 va_start로 초기화한 모든 가변인자리스트는 반환되어야 합니다.
-
-
 
 ##### Links
 [[가변인자]]
