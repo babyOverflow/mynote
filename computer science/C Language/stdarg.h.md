@@ -43,7 +43,8 @@ void foo(char *fmt, ...)
 
 **va_list**는 va_arg, va_start와 va_end가 사용하는 객체이다. 
 **va_start()** 는 *ap(argument pointer)* 가  va_arg나 va_end가 사용할 수 있도록 한다. *last*인자는 가변인자가 등장하기 전 마지막 인자를 넣어준다. *last* 인자는 register variable이나 함수, 배열이면 ***안된다***.
-**va_arg()** 는 #TODO
+**va_arg()** 는 *ap*에서 값을 반환하고 *ap*를 증가시켜 다음 인자를 가르키게 합니다. 이때 반환디고 증가되는 값은 *type*에 따라 결정됩니다.
+%*type*이 *int* 보다 작을 경우(ex char, short) int형(또는 unsigned int)으로 자동으로 변환되고 warning이 뜬다. 컴파일러에 의존적인 작동??
 **va_end()** 는 va_start로 초기화한 가변 인자 리스트를 반환합니다. 함수가 반환되기 전에 va_start로 초기화한 모든 가변인자리스트는 반환되어야 합니다.
 
 
