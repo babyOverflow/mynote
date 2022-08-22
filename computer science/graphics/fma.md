@@ -1,3 +1,5 @@
+# fma - Fused Multiply-Add
+## DESCRIPTION
 fma는 부동소수점 곱하기와 더하기를 한번에 수행한다. `fma(a, b, c) == a + (b * c)` fma를 사용하지 않는다면 `b * c` 에서 반올림을 하고 `a`와  더하는 과정에서 다시 반올림을 한다. fma를 사용하면 마지막에 한번 반올림을 수행함으로 적은 비용으로 정확도 높은 연산을 할 수 있다.
 
 [Multiply–accumulate operation - Wikipedia](https://en.wikipedia.org/wiki/Multiply%E2%80%93accumulate_operation#Fused_multiply%E2%80%93add)

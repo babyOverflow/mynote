@@ -28,3 +28,19 @@ $$
 \end{amatrix}
 
 $$
+
+ㅇ띄어쓰기
+```LaTeX
+	f
+	\,     space
+	\;     double space
+	\quad  tab
+	\qquad double tab
+```
+$$
+	f
+	\,     space
+	\;     double space
+	\quad  tab
+	\qquad double tab
+	$$
